@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripy.js"></script>
+</head>
+<body>
+
+    <!-- This section contain the input and display button and the c button to clear screen -->
+    <div id="box1">
+        <input type="button" id="ce" value="C" onclick="clearScreen()">
+        <input type="text" id="input" placeholder="0" readonly="readonly">
+        <input type="text" id="answer" readonly="readonly">
+        <br>
+
+        <!-- This secion contains the input number to be display on the screen -->
+
+    <div id="first_row">
+        <input type="button" value="1" onclick="getNumber(1)">
+        <input type="button" value="2" onclick="getNumber(2)">
+        <input type="button" value="3" onclick="getNumber(3)">
+        <input type="button" value="x" onclick="getOperand('x')" style="background-color:#d6edd1">
+        <br> 
+        <input type="button" value="4" onclick="getNumber(4)">
+        <input type="button" value="5" onclick="getNumber(5)">
+        <input type="button" value="6" onclick="getNumber(6)">
+        <input type="button" value=" / " onclick="getOperand('/')" style="background-color:#d6edd1">
+        <br>
+        <input type="button" value="7" onclick="getNumber(7)">
+        <input type="button" value="8" onclick="getNumber(8)">
+        <input type="button" value="9" onclick="getNumber(9)">
+        <input type="button" value=" - " onclick="getOperand('-')" style="background-color:#d6edd1">
+        <br>
+        <input type="button" value="&#8592; " onclick="backspace()" style="color:red" id="backspace">
+        <input type="button" value="0" onclick="getNumber(0)">
+        <input type="button" value="=" onclick="compute()" id="equal">
+        <input type="button" value="+" onclick="getOperand('+')" style="background-color:#d6edd1">
+        <br>
+    </div>
+    
+
+    </div>
+    <div id="box2">
+        <input type="button" id="history"value="Clear History" onclick="clearScreen('')">
+        <br>
+
+        
+
+    </div>
+
+    <!-- <div id="footer" >
+        designed</span> <a href="https://github.com/MIZ-KAS" target="_blank" >miz_kas</a> &copy <span id="year"></span>
+    </div> -->
+
+    <!-- jquery side for the date and the history, still working on the history side -->
+
+    <script
+    src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <!-- Use this function to add history to the calculator -->
+
+    <script>
+    $('#year').text(new Date().getFullYear());
+
+    $(document).ready(function() {
+	$("#equal").click(function() {
+		z1 = $("#input").val();
+        
+		$("#history").append(z1 + "<br>");
+	});
+});
+
+    </script>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
