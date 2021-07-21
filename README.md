@@ -21,5 +21,12 @@ java -jar jenkins.war --httpPort=8080
 6. Once the build is completed, a status of the build will show if the build was successful or not. In my case, the build has been executed successfully. 
 7. Click on the #1 in the Build history to bring up the details of the build.
 
+My result
+
+http://localhost:8080/job/SCA_JENKINSAPP/
+
+
+Note: It  skip my eye that we should pick 1 of the two exercise, i did the 2 Exercise. Please perdon me, i have to submit the 2 because i don't know which i did right.
+
 
 
